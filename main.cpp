@@ -1,15 +1,11 @@
-#include <iostream>
-#include "smartphone.h"
 #include "laptoop.h"
-#include "computer.h"
 
 int main()
 {
-    IProduct *device[9];
-    device[0] = new Smartphone("Smartphone" ,"Samsung" ,87.5 ,2.5 ,2.01);
-    device[1] = new Laptoop("Laptoop" ,"ASUS" ,205.5 ,true ,3.5 ,104);
-    device[2] = new Computer("Computer","ASER" ,57.3 ,true ,false);
-
-
+    Laptoop *device[1];
+    device[0] = new Laptoop("Laptoop","Asus",230,3.5,false,104);
+    cout << device[0]->getProduct()<<" "<< device[0]->getName()<<" "<< device[0]->getPrice()
+                                  <<" "<<device[0]->getCamera()<<" "<<device[0]->getKeyboard();
+    delete device[0];
     return 0;
 }
